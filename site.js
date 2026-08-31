@@ -3,6 +3,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".site-header"),
     hero = document.querySelector(".hero"),
     home = document.querySelector("main");
+
+  // Static-export link map: harmless locally, useful when this site is hosted on GitHub Pages.
+  const staticPageLinks = {
+    "/about-sitm/": "about.html",
+    "/admissions/": "admissions.html",
+    "/campuses/": "campuses.html",
+    "/campus-life/": "campus-life.html",
+    "/contact/": "contact.html",
+    "/entebbe-campus/": "entebbe-campus.html",
+    "/programmes/": "programmes.html",
+  };
+
+  document.querySelectorAll("a[href]").forEach((link) => {
+    const destination = staticPageLinks[link.getAttribute("href")];
+
+    if (destination && location.hostname.endsWith("github.io")) {
+      link.setAttribute("href", destination);
+    }
+  });
   if (hero)
     hero.insertAdjacentHTML(
       "afterbegin",
@@ -96,6 +115,50 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     { passive: true },
   );
+
+  // Mobile navigation: create an accessible hamburger without changing page content.
+  const navigation = document.querySelector(".site-header nav");
+  const menu = navigation?.querySelector(".menu");
+
+  if (navigation && menu && !document.querySelector(".site-menu-toggle")) {
+    const menuToggle = document.createElement("button");
+
+    menuToggle.className = "site-menu-toggle";
+    menuToggle.type = "button";
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-controls", "site-primary-menu");
+    menuToggle.setAttribute("aria-label", "Open navigation menu");
+    menuToggle.innerHTML = '<span></span><span></span><span></span>';
+
+    menu.id = "site-primary-menu";
+    navigation.before(menuToggle);
+
+    const closeMenu = () => {
+      navigation.classList.remove("is-menu-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
+    };
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navigation.classList.toggle("is-menu-open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu",
+      );
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if ("Escape" === event.key) {
+        closeMenu();
+      }
+    });
+  }
 });
 /**
  * Shared front-end interactions: navigation, ticker, reveal effects and card motion.
