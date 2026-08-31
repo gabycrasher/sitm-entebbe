@@ -720,3 +720,9 @@ body.application-open {
     grid-template-columns: 1fr;
   }
 }
+
+/* GitHub Pages only: the animated accreditation ticker remains visually clipped. */
+html,
+body {
+  overflow-x: clip;
+}
