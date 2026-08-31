@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   // Mobile navigation: create an accessible hamburger without changing page content.
-  const navigation = document.querySelector(".site-header nav");
+  const navigation = document.querySelector(".primary-navigation");
   const menu = navigation?.querySelector(".menu");
 
   if (navigation && menu && !document.querySelector(".site-menu-toggle")) {
@@ -159,6 +159,61 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Application form: this dialog is intentionally local-only. No information is sent or stored.
+  const applicationDialog = document.querySelector("#application-dialog");
+  const applicationForm = applicationDialog?.querySelector(".application-form");
+  const applicationNotice = applicationDialog?.querySelector(".application-form__notice");
+  const applicationCloseButton = applicationDialog?.querySelector(".application-dialog__close");
+
+  const closeApplication = () => {
+    if (!applicationDialog) return;
+
+    applicationDialog.classList.remove("is-open");
+    applicationDialog.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("application-open");
+  };
+
+  const openApplication = () => {
+    if (!applicationDialog) return;
+
+    applicationDialog.classList.add("is-open");
+    applicationDialog.setAttribute("aria-hidden", "false");
+    document.body.classList.add("application-open");
+    applicationDialog.querySelector("input")?.focus();
+  };
+
+  document.querySelectorAll("[data-application-open]").forEach((button) => {
+    button.addEventListener("click", openApplication);
+  });
+
+  applicationDialog?.querySelectorAll("[data-application-close]").forEach((button) => {
+    button.addEventListener("click", closeApplication);
+  });
+
+  applicationForm?.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!applicationForm.checkValidity()) {
+      applicationForm.reportValidity();
+      return;
+    }
+
+    if (applicationNotice) {
+      applicationNotice.textContent = "Thank you. This demonstration form does not send or store your details.";
+    }
+  });
+
+  applicationForm?.addEventListener("reset", () => {
+    if (applicationNotice) applicationNotice.textContent = "";
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if ("Escape" === event.key && applicationDialog?.classList.contains("is-open")) {
+      closeApplication();
+      applicationCloseButton?.focus();
+    }
+  });
 });
 /**
  * Shared front-end interactions: navigation, ticker, reveal effects and card motion.

@@ -46,7 +46,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <link rel='stylesheet' id='sitm-fonts-css' href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&#038;family=Playfair+Display:wght@700;800&#038;display=swap' media='all' />
 <link rel='stylesheet' id='sitm-style-css' href='style.css?ver=1788128422' media='all' />
-<link rel='stylesheet' id='sitm-custom-css' href='custom.css?ver=1788169693' media='all' />
+<link rel='stylesheet' id='sitm-custom-css' href='custom.css?ver=1788170664' media='all' />
 <link rel='stylesheet' id='sitm-premium-css' href='premium.css?ver=1788128422' media='all' />
 <link rel='stylesheet' id='sitm-tech-palette-css' href='tech-palette.css?ver=1788157615' media='all' />
 <link rel='stylesheet' id='sitm-sage-emphasis-css' href='sage-emphasis.css?ver=1788128422' media='all' />
@@ -65,30 +65,54 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <body class="wp-singular page-template-default page page-id-80 wp-theme-sitm-entebbe">
 
-<!-- Site header and primary navigation. -->
+<!-- Public-school header: utility links followed by the main information navigation. -->
 <header class="site-header">
-    <div class="wrap nav">
-        <a class="brand" href="index.html">
-            SITM<span>ENTEBBE CAMPUS</span>
-        </a>
+    <div class="site-utility-bar">
+        <div class="wrap utility-content">
+            <div class="utility-audiences" aria-label="Information for">
+                <strong>Information for:</strong>
+                <a href="programmes.html">Students</a>
+                <a href="contact.html">Parents</a>
+                <a href="campus-life.html">Alumni</a>
+            </div>
 
-        <nav aria-label="Primary navigation">
-            <ul id="menu-sitm-primary" class="menu"><li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-55"><a href="index.html">Home</a></li>
-<li id="menu-item-56" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-56"><a href="about.html">About SITM</a></li>
-<li id="menu-item-58" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-58"><a href="admissions.html">Admissions</a></li>
-<li id="menu-item-59" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-59"><a href="contact.html">Contact</a></li>
-<li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-80 current_page_item menu-item-57"><a href="campuses.html" aria-current="page">Campuses</a></li>
-<li id="menu-item-89" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-89"><a href="campus-life.html">Campus Life</a></li>
-</ul>        </nav>
+            <div class="utility-actions">
+                <a href="contact.html">Contact SITM</a>
+                <span aria-hidden="true">|</span>
+                <a href="mailto:info@saipali.education">info@saipali.education</a>
+                <span class="utility-language">EN</span>
+            </div>
+        </div>
+    </div>
 
-        <a
-            class="button"
-            href="https://sms.saipali.education/v4isms/admission/enquiry"
-            target="_blank"
-            rel="noopener"
-        >
-            Enquire now
-        </a>
+    <div class="site-main-nav">
+        <div class="wrap nav">
+            <a class="brand brand--school" href="index.html" aria-label="Sai Pali Institute of Technology and Management home">
+                <span class="brand-mark" aria-hidden="true">S</span>
+                <span class="brand-copy">SAI PALI<small>SITM ENTEBBE CAMPUS</small></span>
+            </a>
+
+            <nav class="primary-navigation" aria-label="Primary navigation">
+                <ul class="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programmes.html">Courses</a></li>
+                    <li><a href="campus-life.html">Campus Life</a></li>
+                    <li><a href="https://saipali.education/events/" target="_blank" rel="noopener">Events</a></li>
+                    <li><a href="https://saipali.education/graduation/" target="_blank" rel="noopener">Graduation</a></li>
+                    <li><a href="https://saipali.education/results/" target="_blank" rel="noopener">Results</a></li>
+                    <li><a href="https://saipali.education/blog/" target="_blank" rel="noopener">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="nav-search" href="programmes.html" aria-label="Browse SITM courses">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.3"></circle><path d="m16 16 4.2 4.2"></path></svg>
+                </a>
+                <button class="button button--apply" type="button" data-application-open>Apply now</button>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -130,6 +154,59 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
     </main>
 
 
+<section id="application-dialog" class="application-dialog" aria-hidden="true">
+    <div class="application-dialog__backdrop" data-application-close></div>
+
+    <div class="application-dialog__panel" role="dialog" aria-modal="true" aria-labelledby="application-title">
+        <button class="application-dialog__close" type="button" data-application-close aria-label="Close application form">×</button>
+
+        <div class="application-dialog__intro">
+            <p class="eyebrow">SITM admissions</p>
+            <h2 id="application-title">Enquiry Form</h2>
+            <p>
+                Enrol in diploma or certificate programmes at a top-tier educational institution to increase your work opportunities.
+                Our graduates are sought after by top employers due to their exceptional skills and knowledge. Your future starts here at #SITM.
+            </p>
+        </div>
+
+        <form class="application-form" novalidate>
+            <div class="application-form__grid">
+                <label>Your name<input type="text" name="name" placeholder="Your name" required></label>
+                <label>Contact no<input type="tel" name="phone" placeholder="Student phone number" required></label>
+                <label>Address<input type="text" name="address" placeholder="Student address" required></label>
+                <label>Email<input type="email" name="email" placeholder="Student email address" required></label>
+                <label>Parent/Guardian name<input type="text" name="guardian_name" placeholder="Parent/Guardian"></label>
+                <label>Parent/Guardian contact no<input type="tel" name="guardian_phone" placeholder="Parent/Guardian contact no"></label>
+                <label>Former school / company<input type="text" name="former_school" placeholder="Former school or company"></label>
+                <label>Choose a programme
+                    <select name="programme" required>
+                        <option value="">Select a programme</option>
+                        <option>Software Engineering</option>
+                        <option>Visual Effects &amp; Animation</option>
+                        <option>Infrastructure Management Services</option>
+                        <option>AI, Cloud &amp; Cybersecurity</option>
+                        <option>Graphic Design</option>
+                    </select>
+                </label>
+                <label>Choose reference
+                    <select name="reference">
+                        <option>Sai Pali Website</option>
+                        <option>Friend or family</option>
+                        <option>Social media</option>
+                        <option>School visit or event</option>
+                    </select>
+                </label>
+            </div>
+
+            <p class="application-form__notice" aria-live="polite"></p>
+
+            <div class="application-form__actions">
+                <button class="button button--apply" type="submit">Submit enquiry</button>
+                <button class="application-form__reset" type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</section>
 
 <!-- Floating WhatsApp enquiry action. -->
 <a
@@ -147,9 +224,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <!-- Compact enquiry action shown only on mobile. -->
 <div class="mobile-apply-bar">
-    <a href="https://sms.saipali.education/v4isms/admission/enquiry" target="_blank" rel="noopener">
-        Apply / Enquire now
-    </a>
+    <button type="button" data-application-open>Apply now</button>
 </div>
 
 <!-- Footer navigation and contact summary. -->
@@ -183,7 +258,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/sitm-entebbe/*"},{"not":{"href_matches":["/sitm-entebbe/wp-*.php","/sitm-entebbe/wp-admin/*","/sitm-entebbe/wp-content/uploads/*","/sitm-entebbe/wp-content/*","/sitm-entebbe/wp-content/plugins/*","/sitm-entebbe/wp-content/themes/sitm-entebbe/*","/sitm-entebbe/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script id="sitm-motion-js" src="site.js?ver=1788169728"></script>
+<script id="sitm-motion-js" src="site.js?ver=1788170684"></script>
 <script id="sitm-content-depth-js" src="content-depth.js?ver=1788128422"></script>
 <script id="wp-emoji-settings" type="application/json">
 {"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"/wp-includes/js/wp-emoji-release.min.js?ver=7.1"}}
