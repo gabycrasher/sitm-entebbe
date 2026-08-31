@@ -1,0 +1,26 @@
+.programme-showcase > a,
+.programme-showcase > a:visited {
+  color: #fff !important;
+}
+.programme-showcase > a p {
+  color: rgba(255, 255, 255, 0.88) !important;
+  opacity: 1 !important;
+}
+.programme-showcase > a h3 {
+  color: #fff !important;
+}
+.programme-showcase > a span {
+  color: #ffb606 !important;
+}
+.programme-showcase > a:before {
+  z-index: 0;
+}
+.programme-showcase > a > * {
+  position: relative;
+  z-index: 1;
+}
+.value-card p {
+  color: #53677c !important;
+  opacity: 1 !important;
+}
+/* Readability fixes for highlighted programme and values cards. */

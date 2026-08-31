@@ -1,0 +1,40 @@
+.page-hero {
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+}
+.page-hero.admissions {
+  background-image:
+    linear-gradient(105deg, rgba(26, 35, 50, 0.42), rgba(26, 35, 50, 0.18)),
+    url("https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1800&q=90") !important;
+}
+.page-hero.contact {
+  background-image:
+    linear-gradient(105deg, rgba(26, 35, 50, 0.42), rgba(26, 35, 50, 0.18)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=90") !important;
+}
+.page-hero.campuses {
+  background-image:
+    linear-gradient(105deg, rgba(26, 35, 50, 0.42), rgba(26, 35, 50, 0.18)),
+    url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=90") !important;
+}
+.page-hero.about-sitm {
+  background-image:
+    linear-gradient(105deg, rgba(26, 35, 50, 0.42), rgba(26, 35, 50, 0.18)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1800&q=90") !important;
+}
+.page-hero.entebbe-campus {
+  background-image:
+    linear-gradient(105deg, rgba(26, 35, 50, 0.42), rgba(26, 35, 50, 0.18)),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=90") !important;
+}
+.page-hero h1 {
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.32);
+}
+.page-hero .eyebrow {
+  color: #ffcf54 !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.38);
+}
+/* Image treatments that keep hero and content photography readable. */

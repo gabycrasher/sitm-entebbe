@@ -1,0 +1,19 @@
+.story-card {
+  padding-bottom: 110px !important;
+}
+.story-card:after {
+  right: 24px !important;
+  bottom: 22px !important;
+  color: rgba(255, 255, 255, 0.22) !important;
+  font-size: clamp(42px, 7vw, 76px) !important;
+  letter-spacing: -0.05em;
+  line-height: 0.9;
+  pointer-events: none;
+}
+.story-card h2,
+.story-card p,
+.story-card .eyebrow {
+  position: relative;
+  z-index: 1;
+}
+/* Decorative history years on the home-page story card. */

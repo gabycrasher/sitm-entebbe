@@ -1,0 +1,254 @@
+.values-section {
+  background: linear-gradient(180deg, #fff, #f4f8f4);
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.value-card,
+.programme-showcase > a {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #d9e5da;
+  border-radius: 20px;
+  background: #fff;
+  padding: 1.5rem;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.value-card:hover,
+.programme-showcase > a:hover {
+  transform: translateY(-5px);
+  border-color: #5c8a6a;
+  box-shadow: 0 17px 40px rgba(26, 35, 50, 0.11);
+}
+.value-card > b {
+  color: #5c8a6a;
+  letter-spacing: 0.08em;
+}
+.value-card h3 {
+  margin: 0.75rem 0 0.45rem;
+}
+.value-card p {
+  margin: 0;
+  color: #667589;
+}
+.milestone-timeline {
+  position: relative;
+  max-width: 920px;
+  margin: auto;
+  padding-left: 3.5rem;
+}
+.milestone-timeline:before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #d6e0d7;
+}
+.milestone-progress {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  width: 2px;
+  height: 0;
+  background: #ffb606;
+  transition: height 0.2s linear;
+}
+.milestone {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 1.25rem;
+  padding: 0 0 2rem;
+}
+.milestone:before {
+  content: "";
+  position: absolute;
+  left: -3.05rem;
+  top: 0.35rem;
+  width: 13px;
+  height: 13px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  background: #5c8a6a;
+  box-shadow: 0 0 0 1px #5c8a6a;
+}
+.milestone time {
+  font-weight: 800;
+  color: #5c8a6a;
+}
+.milestone h3 {
+  margin: 0;
+}
+.milestone p {
+  margin: 0.35rem 0 0;
+  color: #667589;
+}
+.programme-showcase {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.programme-showcase > a {
+  min-height: 205px;
+  background: #1a2332;
+  color: #fff;
+  border: 0;
+}
+.programme-showcase > a:nth-child(2n) {
+  background: #5c8a6a;
+}
+.programme-showcase > a:nth-child(3n) {
+  background: #314054;
+}
+.programme-showcase span {
+  color: #ffb606;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.programme-showcase h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  margin: 0.8rem 0;
+}
+.programme-showcase p {
+  font-size: 0.92rem;
+  line-height: 1.55;
+  opacity: 0.84;
+}
+.proof-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 3.2rem;
+  border-radius: 28px;
+  background: #1a2332;
+  color: #fff;
+}
+.proof-card:after {
+  content: "";
+  position: absolute;
+  width: 430px;
+  height: 430px;
+  right: -180px;
+  top: -250px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #5c8a6a, transparent 67%);
+  opacity: 0.75;
+}
+.proof-card > div {
+  position: relative;
+  z-index: 1;
+}
+.proof-card h2 {
+  max-width: 570px;
+}
+.proof-card p {
+  max-width: 670px;
+  color: #d6e4d8;
+}
+.proof-number {
+  text-align: right;
+}
+.proof-number b {
+  display: block;
+  font:
+    800 clamp(3.2rem, 7vw, 6rem)/0.9 "Playfair Display",
+    serif;
+  color: #ffb606;
+}
+.proof-number span {
+  font-weight: 800;
+}
+.campus-facility-image {
+  min-height: 360px;
+  border-radius: 22px;
+  background:
+    linear-gradient(120deg, rgba(26, 35, 50, 0.08), rgba(26, 35, 50, 0.05)),
+    url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1100&q=90")
+      center/cover;
+  clip-path: inset(0 0 0 0 round 22px);
+}
+.faq-list {
+  max-width: 840px;
+  margin: auto;
+  border-top: 1px solid #d8e2d9;
+}
+.faq-list details {
+  border-bottom: 1px solid #d8e2d9;
+  padding: 0;
+}
+.faq-list summary {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1.25rem 0;
+  font-weight: 800;
+  color: #1a2332;
+}
+.faq-list summary:after {
+  content: "+";
+  font-size: 1.4rem;
+  color: #5c8a6a;
+}
+.faq-list details[open] summary:after {
+  content: "–";
+}
+.faq-list p {
+  margin: 0;
+  padding: 0 0 1.25rem;
+  color: #667589;
+}
+.faq-list a {
+  color: #5c8a6a;
+  font-weight: 800;
+}
+@media (max-width: 900px) {
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .programme-showcase {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .proof-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .proof-number {
+    text-align: left;
+  }
+}
+@media (max-width: 600px) {
+  .values-grid,
+  .programme-showcase {
+    grid-template-columns: 1fr;
+  }
+  .milestone-timeline {
+    padding-left: 2.5rem;
+  }
+  .milestone {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+  .milestone:before {
+    left: -2.06rem;
+  }
+  .proof-card {
+    padding: 2rem;
+  }
+  .campus-facility-image {
+    min-height: 260px;
+  }
+}
+/* Home-page content sections: values, milestones, programmes, proof and FAQ. */

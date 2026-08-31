@@ -1,0 +1,562 @@
+/*
+Theme Name: SITM Entebbe
+Description: Modern public-information website for the SITM Entebbe campus.
+Version: 1.1.0
+Text Domain: sitm-entebbe
+*/
+:root {
+  --primary: #2ba200 !important;
+  --purple: #02360e !important;
+  --blue: #2ba200 !important;
+  --ink: #02360e !important;
+  --cream: #f7fbf4 !important;
+  --muted: #536957 !important;
+  --line: #dcebd8 !important;
+  --shadow: 0 24px 70px rgba(2, 54, 14, 0.14) !important;
+}
+.site-header {
+  background: rgba(2, 54, 14, 0.93) !important;
+}
+.hero {
+  background:
+    linear-gradient(105deg, rgba(2, 54, 14, 0.96), rgba(22, 113, 35, 0.76)),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85")
+      center/cover !important;
+}
+.story-card {
+  background: linear-gradient(145deg, #02360e, #2ba200) !important;
+}
+.cta {
+  background: linear-gradient(115deg, #02360e, #2ba200 62%, #73c739) !important;
+}
+.site-footer {
+  background: #01280a !important;
+}
+.page-hero {
+  background: linear-gradient(115deg, #02360e, #2ba200) !important;
+}
+:root {
+  --primary: #2ba200;
+  --purple: #02360e;
+  --blue: #2ba200;
+  --ink: #02360e;
+  --cream: #f7fbf4;
+  --muted: #536957;
+  --line: #dcebd8;
+  --shadow: 0 24px 70px rgba(2, 54, 14, 0.14);
+}
+.site-header {
+  background: rgba(2, 54, 14, 0.93);
+}
+.hero {
+  background:
+    linear-gradient(105deg, rgba(2, 54, 14, 0.96), rgba(22, 113, 35, 0.76)),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85")
+      center/cover;
+}
+.hero:after {
+  box-shadow:
+    0 0 0 55px rgba(43, 162, 0, 0.17),
+    0 0 0 110px rgba(255, 182, 6, 0.08);
+}
+.feature,
+.track,
+.programme {
+  border-color: rgba(43, 162, 0, 0.16);
+  box-shadow: 0 10px 30px rgba(2, 54, 14, 0.07);
+}
+.feature-icon {
+  background: linear-gradient(135deg, #e6f7e2, #e9f4d8);
+}
+.story-card {
+  background: linear-gradient(145deg, #02360e, #2ba200);
+}
+.cta {
+  background: linear-gradient(115deg, #02360e, #2ba200 62%, #73c739);
+}
+.site-footer {
+  background: #01280a;
+}
+.page-hero {
+  background: linear-gradient(115deg, #02360e, #2ba200);
+}
+:root {
+  --ink: #171035;
+  --purple: #6020d2;
+  --blue: #2e67f5;
+  --gold: #ffb606;
+  --green: #2ba200;
+  --cream: #faf9ff;
+  --white: #fff;
+  --muted: #62627b;
+  --line: #e6e2f3;
+  --radius: 26px;
+  --shadow: 0 24px 70px rgba(52, 29, 115, 0.14);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font:
+    16px/1.65 Inter,
+    Arial,
+    sans-serif;
+  background-image:
+    radial-gradient(rgba(96, 32, 210, 0.08) 1px, transparent 1px),
+    radial-gradient(rgba(46, 103, 245, 0.06) 1px, transparent 1px);
+  background-size:
+    26px 26px,
+    46px 46px;
+  background-position:
+    0 0,
+    13px 13px;
+}
+.wrap {
+  width: min(1180px, calc(100% - 48px));
+  margin: auto;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  background: rgba(23, 16, 53, 0.91);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+}
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.brand {
+  font:
+    800 20px/1.05 Georgia,
+    serif;
+  letter-spacing: 0.02em;
+}
+.brand span {
+  display: block;
+  color: var(--gold);
+  font: 700 10px/1 Arial;
+  letter-spacing: 0.16em;
+  margin-top: 5px;
+}
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+.menu a {
+  color: #fff;
+  opacity: 0.86;
+  transition:
+    opacity 0.2s,
+    color 0.2s;
+}
+.menu a:hover {
+  color: var(--gold);
+  opacity: 1;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 21px;
+  border-radius: 999px;
+  background: linear-gradient(115deg, var(--purple), var(--blue));
+  color: #fff !important;
+  font-weight: 800;
+  box-shadow: 0 10px 26px rgba(46, 103, 245, 0.25);
+  transition:
+    transform 0.22s,
+    box-shadow 0.22s;
+}
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(46, 103, 245, 0.34);
+}
+.button--light {
+  background: #fff;
+  color: var(--purple) !important;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 142px 0 126px;
+  color: #fff;
+  background:
+    linear-gradient(105deg, rgba(23, 16, 53, 0.96), rgba(54, 30, 125, 0.78)),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85")
+      center/cover;
+}
+.hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to right, #000, transparent);
+}
+.hero:after {
+  content: "";
+  position: absolute;
+  right: -5%;
+  bottom: -180px;
+  width: 460px;
+  height: 460px;
+  border: 1px solid rgba(255, 182, 6, 0.5);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 55px rgba(96, 32, 210, 0.16),
+    0 0 0 110px rgba(46, 103, 245, 0.09);
+}
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+.eyebrow,
+.kicker {
+  display: inline-block;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  font:
+    800 clamp(44px, 7vw, 76px)/0.98 Georgia,
+    serif;
+  margin: 17px 0 24px;
+}
+.hero p {
+  max-width: 600px;
+  color: #e7e2ff;
+  font-size: 18px;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 30px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 54px;
+  max-width: 700px;
+}
+.stat {
+  border-left: 2px solid var(--gold);
+  padding-left: 14px;
+}
+.stat b {
+  display: block;
+  font:
+    800 28px Georgia,
+    serif;
+}
+.stat span {
+  font-size: 12px;
+  color: #e1dcf7;
+}
+.section {
+  padding: 112px 0;
+}
+.section-alt {
+  background: rgba(255, 255, 255, 0.9);
+}
+.section-head {
+  max-width: 720px;
+  margin-bottom: 38px;
+}
+.section h2 {
+  font:
+    800 clamp(31px, 4vw, 48px)/1.06 Georgia,
+    serif;
+  margin: 11px 0;
+}
+.section p {
+  color: var(--muted);
+}
+.grid,
+.tracks,
+.programme-list {
+  display: grid;
+  gap: 20px;
+}
+.grid-3,
+.tracks,
+.programme-list {
+  grid-template-columns: repeat(3, 1fr);
+}
+.feature,
+.track,
+.programme {
+  background: #fff;
+  border: 1px solid rgba(96, 32, 210, 0.13);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(52, 29, 115, 0.06);
+}
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #eee6ff, #e3efff);
+  color: var(--purple);
+  font: 800 19px Georgia;
+}
+.feature h3,
+.track h3 {
+  margin: 18px 0 7px;
+  font:
+    800 22px Georgia,
+    serif;
+}
+.track {
+  border-top: 4px solid var(--accent, var(--purple));
+  transition:
+    transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.32s;
+}
+.track:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+}
+.track span,
+.tag {
+  font-weight: 800;
+  font-size: 12px;
+  color: var(--muted);
+}
+.split,
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 52px;
+  align-items: center;
+}
+.image-panel {
+  min-height: 450px;
+  border-radius: var(--radius);
+  background: url("https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=85")
+    center/cover;
+  box-shadow: var(--shadow);
+}
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0;
+}
+.checklist li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+}
+.checklist li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--green);
+  font-weight: 900;
+}
+.story-grid {
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+}
+.story-card {
+  padding: 38px;
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, #1d1248, #5130bf);
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.story-card:after {
+  content: "2013—2026";
+  position: absolute;
+  right: -12px;
+  bottom: -26px;
+  color: rgba(255, 255, 255, 0.08);
+  font: 800 76px/1 Georgia;
+}
+.story-card p {
+  position: relative;
+  z-index: 1;
+  color: #e8e2ff !important;
+}
+.learning-stack {
+  display: grid;
+  gap: 14px;
+}
+.learning-item {
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.learning-item strong {
+  display: block;
+  color: var(--purple);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.cta {
+  padding: 92px 0;
+  background: linear-gradient(
+    115deg,
+    var(--purple),
+    var(--blue) 62%,
+    var(--green)
+  );
+  color: #fff;
+}
+.cta h2 {
+  margin: 0;
+  font:
+    800 clamp(30px, 4vw, 48px)/1 Georgia,
+    serif;
+}
+.cta p {
+  color: #fff;
+}
+.cta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.site-footer {
+  background: #0d0924;
+  color: #dcd7f4;
+  padding: 55px 0 24px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 34px;
+}
+.site-footer h3 {
+  font: 800 18px Georgia;
+  color: #fff;
+}
+.site-footer a {
+  display: block;
+  margin: 7px 0;
+}
+.legal {
+  border-top: 1px solid #31285b;
+  margin-top: 36px;
+  padding-top: 18px;
+  font-size: 13px;
+}
+.page-hero {
+  padding: 100px 0;
+  color: #fff;
+  background: linear-gradient(115deg, #171035, var(--purple));
+}
+.page-hero h1 {
+  font: 800 clamp(38px, 5vw, 58px)/1 Georgia;
+  margin: 12px 0;
+}
+.entry {
+  max-width: 800px;
+}
+.entry h2 {
+  font: 800 28px Georgia;
+}
+.programme h2 {
+  font: 800 22px/1.2 Georgia;
+  margin: 10px 0;
+}
+.tag {
+  display: inline-block;
+  background: #f0ecfb;
+  padding: 4px 9px;
+  border-radius: 999px;
+}
+main {
+  animation: page-enter 0.65s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 800px) {
+  .wrap {
+    width: min(100% - 32px, 1180px);
+  }
+  .menu {
+    display: none;
+  }
+  .hero {
+    padding: 104px 0 86px;
+  }
+  .section {
+    padding: 74px 0;
+  }
+  .stats,
+  .grid-3,
+  .tracks,
+  .programme-list,
+  .footer-grid,
+  .split,
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .image-panel {
+    min-height: 300px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  main {
+    animation: none;
+  }
+  .track,
+  .button {
+    transition: none;
+  }
+}
+/*
+ * SITM Entebbe base theme styles.
+ * Layout, typography, navigation, page sections and responsive foundations.
+ */

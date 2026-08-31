@@ -1,0 +1,117 @@
+:root {
+  --ink: #1a2332 !important;
+  --primary: #1a2332 !important;
+  --purple: #1a2332 !important;
+  --blue: #5c8a6a !important;
+  --green: #5c8a6a !important;
+  --gold: #ffb606 !important;
+  --cream: #f6f7f5 !important;
+  --muted: #647080 !important;
+  --line: #dce2df !important;
+  --shadow: 0 20px 52px rgba(26, 35, 50, 0.11) !important;
+}
+.site-header {
+  /* Main navigation: deep forest green with a soft, contemporary finish. */
+  background: linear-gradient(120deg, #163b2a, #245b3d) !important;
+  border-bottom: 1px solid rgba(151, 200, 166, 0.22);
+  box-shadow: 0 12px 32px rgba(10, 43, 28, 0.16);
+}
+
+.site-header.is-scrolled {
+  /* Slightly translucent on scroll so the header feels lighter, not heavier. */
+  background: rgba(22, 59, 42, 0.94) !important;
+  border-bottom: 1px solid rgba(151, 200, 166, 0.22);
+  box-shadow: 0 12px 30px rgba(10, 43, 28, 0.22);
+  backdrop-filter: blur(14px);
+}
+
+.site-header .brand span {
+  color: #b7d5bd;
+}
+
+.site-header .menu a {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.site-header .menu a:hover {
+  color: #d8efdc !important;
+}
+.hero {
+  background:
+    linear-gradient(105deg, rgba(26, 35, 50, 0.96), rgba(26, 35, 50, 0.72)),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85")
+      center/cover !important;
+}
+.hero-blob {
+  background: #5c8a6a !important;
+  opacity: 0.22 !important;
+}
+.hero:after {
+  border-color: rgba(255, 182, 6, 0.38) !important;
+  box-shadow:
+    0 0 0 55px rgba(92, 138, 106, 0.12),
+    0 0 0 110px rgba(255, 182, 6, 0.05) !important;
+}
+.button {
+  background: #ffb606 !important;
+  color: #1a2332 !important;
+  box-shadow: 0 8px 20px rgba(255, 182, 6, 0.19) !important;
+}
+.button--light {
+  background: #fff !important;
+  color: #1a2332 !important;
+}
+.menu a:hover {
+  color: #ffcf54 !important;
+}
+.menu a:after {
+  background: #ffb606 !important;
+}
+.feature,
+.track,
+.programme {
+  border-color: rgba(92, 138, 106, 0.24) !important;
+  box-shadow: 0 8px 24px rgba(26, 35, 50, 0.06) !important;
+}
+.feature-icon {
+  background: #edf3ef !important;
+  color: #5c8a6a !important;
+}
+.track {
+  border-top-color: var(--accent, #5c8a6a) !important;
+}
+.story-card {
+  background: linear-gradient(145deg, #1a2332, #314457) !important;
+}
+.cta {
+  background: linear-gradient(110deg, #1a2332, #314457 62%, #5c8a6a) !important;
+}
+.site-footer {
+  background: #121b27 !important;
+}
+.page-hero {
+  background: linear-gradient(115deg, #1a2332, #314457) !important;
+}
+.page-hero.campuses,
+.page-hero.admissions,
+.page-hero.about,
+.page-hero.contact {
+  background-color: #1a2332 !important;
+  background-blend-mode: multiply !important;
+}
+.campus-card h2,
+.learning-item strong,
+.campus-card .label,
+.step b {
+  color: #5c8a6a !important;
+}
+.accreditation-ticker {
+  background: #1a2332 !important;
+}
+.ticker-track span:before {
+  color: #ffb606 !important;
+}
+.bento-grid .feature:first-child {
+  background: linear-gradient(145deg, #eef4ef, #fff) !important;
+}
+/* SITM colour system: charcoal navy base, sage accents and gold calls to action. */

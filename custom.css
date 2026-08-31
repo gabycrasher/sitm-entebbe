@@ -1,0 +1,202 @@
+:root {
+  --primary: #067f0f !important;
+  --purple: #1c5429 !important;
+  --blue: #5aaf4b !important;
+  --ink: #12351b !important;
+  --cream: #fbfcf8 !important;
+  --muted: #5e6d61 !important;
+  --line: #dce6dc !important;
+  --shadow: 0 20px 52px rgba(28, 84, 41, 0.1) !important;
+}
+.site-header {
+  background: rgba(28, 84, 41, 0.96) !important;
+}
+.hero {
+  background:
+    linear-gradient(105deg, rgba(28, 84, 41, 0.95), rgba(6, 127, 15, 0.66)),
+    url("https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1800&q=85")
+      center/cover !important;
+}
+.hero:after {
+  box-shadow:
+    0 0 0 55px rgba(90, 175, 75, 0.14),
+    0 0 0 110px rgba(255, 182, 6, 0.07) !important;
+}
+.button {
+  box-shadow: 0 8px 20px rgba(28, 84, 41, 0.2) !important;
+}
+.button:hover {
+  box-shadow: 0 12px 28px rgba(28, 84, 41, 0.3) !important;
+}
+.feature,
+.track,
+.programme {
+  border-color: rgba(28, 84, 41, 0.13) !important;
+  box-shadow: 0 8px 24px rgba(28, 84, 41, 0.055) !important;
+}
+.feature-icon {
+  background: linear-gradient(135deg, #e8f2df, #eff6e9) !important;
+}
+.story-card {
+  background: linear-gradient(145deg, #1c5429, #438d36) !important;
+}
+.cta {
+  background: linear-gradient(110deg, #1c5429, #438d36 62%, #78b85d) !important;
+}
+.site-footer {
+  background: #12351b !important;
+}
+.page-hero {
+  background: linear-gradient(115deg, #1c5429, #438d36) !important;
+}
+.page-hero.campuses {
+  background:
+    linear-gradient(110deg, rgba(28, 84, 41, 0.92), rgba(67, 141, 54, 0.78)),
+    url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=85")
+      center/cover !important;
+}
+.page-hero.admissions {
+  background:
+    linear-gradient(110deg, rgba(18, 53, 27, 0.93), rgba(67, 141, 54, 0.7)),
+    url("https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1600&q=85")
+      center/cover !important;
+}
+.page-hero.about {
+  background:
+    linear-gradient(110deg, rgba(28, 84, 41, 0.94), rgba(6, 127, 15, 0.66)),
+    url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=85")
+      center/cover !important;
+}
+.page-hero.contact {
+  background:
+    linear-gradient(110deg, rgba(18, 53, 27, 0.94), rgba(67, 141, 54, 0.68)),
+    url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=85")
+      center/cover !important;
+}
+.campus-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.campus-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: var(--shadow);
+}
+.campus-card h2 {
+  color: #1c5429;
+}
+.campus-card .label {
+  color: #067f0f;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.step {
+  padding: 26px;
+  background: #f4f8ef;
+  border-radius: 18px;
+}
+.step b {
+  display: block;
+  color: #067f0f;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+}
+@media (max-width: 800px) {
+  .campus-cards,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+}
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+.feature,
+.track,
+.programme,
+.campus-card,
+.learning-item,
+.step {
+  transition:
+    transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.28s,
+    border-color 0.28s;
+}
+.card-lift:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 42px rgba(28, 84, 41, 0.14) !important;
+  border-color: rgba(6, 127, 15, 0.34) !important;
+}
+.programme:before,
+.campus-card:before {
+  content: "";
+  display: block;
+  width: 38px;
+  height: 4px;
+  margin-bottom: 20px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, #1c5429, #5aaf4b);
+}
+.steps .step {
+  position: relative;
+  overflow: hidden;
+}
+.steps .step:after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  right: -44px;
+  bottom: -52px;
+  background: rgba(90, 175, 75, 0.12);
+}
+.stats .stat {
+  transition:
+    transform 0.3s,
+    border-color 0.3s;
+}
+.stats .stat:hover {
+  transform: translateX(6px);
+  border-color: #5aaf4b;
+}
+.site-header {
+  transition: box-shadow 0.25s;
+}
+.site-header.is-scrolled {
+  box-shadow: 0 10px 25px rgba(18, 53, 27, 0.18);
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card-lift,
+  .feature,
+  .track,
+  .programme,
+  .campus-card,
+  .learning-item,
+  .step {
+    transition: none;
+  }
+}
+/* Custom shared components: cards, programme lists and page content. */

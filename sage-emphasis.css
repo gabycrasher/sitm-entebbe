@@ -1,0 +1,41 @@
+.section:nth-of-type(even) {
+  background: linear-gradient(180deg, #f7faf6, #edf3ef) !important;
+}
+.section-head .kicker {
+  color: #5c8a6a !important;
+}
+.feature-icon,
+.track span {
+  color: #5c8a6a !important;
+}
+.stats .stat {
+  border-left-color: #5c8a6a !important;
+}
+.stats .stat:hover {
+  border-left-color: #5c8a6a !important;
+}
+.campus-card .label,
+.learning-item strong {
+  color: #5c8a6a !important;
+}
+.step {
+  background: #edf3ef !important;
+}
+.step:after {
+  background: rgba(92, 138, 106, 0.18) !important;
+}
+.menu a:hover {
+  color: #b8d0bd !important;
+}
+.hero .eyebrow {
+  color: #b8d0bd !important;
+}
+.programme:before,
+.campus-card:before {
+  background: linear-gradient(90deg, #5c8a6a, #a5c2aa) !important;
+}
+.tag {
+  background: #e5eee7 !important;
+  color: #456d50 !important;
+}
+/* Additional sage-green emphasis for highlighted learning and campus content. */
